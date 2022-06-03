@@ -27,10 +27,10 @@ if (index > 2) {
 function indexIs(i){
   if (i == -1) {
     index = place-1;
-    nextWord0 = word.data[index].attributes.MaleorPresent;
-    nextWord1 = word.data[index+1].attributes.MaleorPresent;
-    nextWord2 = word.data[index+2].attributes.MaleorPresent;
-    nextWord3 = word.data[index+3].attributes.MaleorPresent;
+    nextWord0 = word.data[index+1].attributes.MaleorPresent;
+    nextWord1 = word.data[index+2].attributes.MaleorPresent;
+    nextWord2 = word.data[index+3].attributes.MaleorPresent;
+    nextWord3 = word.data[index+4].attributes.MaleorPresent;
     if (index > 0) {
       prevWord2 = word.data[index-1].attributes.MaleorPresent;
     }
@@ -154,7 +154,7 @@ http://www.branah.com/thai
 
                     <span class="next_btns">
                     {#if index >= 2}
-                       <a style='color:#996666' on:click={()=>indexIs(-2)}>{prevWord1},</a>
+                       <a style="opacity:0.4;color:#996666" on:click={()=>indexIs(-2)}>{prevWord1},</a>
                      {/if}
                      </span>
 
@@ -166,14 +166,14 @@ http://www.branah.com/thai
                       {/if}</span>
 
 
-                      <span class="next_btns" style='display:inline-block;color:#666666;text-align:center;'>{word.data[index].attributes.MaleorPresent},</span>
+                      <span class="next_btns" style='display:inline-block;color:#666666;text-align:center;'><u>{word.data[index].attributes.MaleorPresent}</u>,</span>
 
 
                     <span class="next_btns" style='display:inline-block;padding-left:15px;padding-right:5px;text-align:center;'>
 
                     <a on:click={()=>indexIs(1)}>{nextWord0},</a></span>
 
-                    <span class="next_btns"><a on:click={()=>indexIs(1)}>{nextWord1}</a></span>,
+                    <span style="opacity:0.4;" class="next_btns"><a on:click={()=>indexIs(1)}>{nextWord1}</a></span>,
 
                     <!--<a href='index.php?laphaza=ਰਾਈ'></a>,
 

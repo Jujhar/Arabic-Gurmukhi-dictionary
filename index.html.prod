@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Arabic Gurmukhi Dictionary</title>
-    <script type="module" crossorigin src="dist/assets/index.1848ed3f.js"></script>
-    <link rel="stylesheet" href="dist/assets/index.21ba4c7e.css">
-  </head>
-  <body>
-
-  </body>
-</html>
+1. vite built
+2. copy from dist/index.html
+3. change two hrefs from `x` to `dist/x` 
