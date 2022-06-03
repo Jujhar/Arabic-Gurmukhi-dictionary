@@ -25,9 +25,23 @@
       "type": "enumeration",
       "enum": [
         "Male / Female",
+        "Male / Male",
         "Past / Present",
         "Singular / Plural"
       ]
+    },
+    "DateAdded": {
+      "type": "datetime",
+      "default": "2022-06-02T07:00:00.000Z",
+      "required": true
+    },
+    "Lang": {
+      "type": "enumeration",
+      "enum": [
+        "Arabic",
+        "Persian"
+      ],
+      "default": "Arabic"
     }
   }
 }
