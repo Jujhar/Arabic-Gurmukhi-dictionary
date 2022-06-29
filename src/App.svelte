@@ -1,5 +1,4 @@
 <script>
-
 let index = 0;
 $: place = index;
 
@@ -56,8 +55,26 @@ function indexIs(i){
       prevWord0 = word.data[index-3].attributes.MaleorPresent;
     }
   }
-}
 
+
+  // Animate fade-in
+  document.getElementById("desc").animate([
+    { transform: 'translateY(-2px)' },
+    { transform: 'translateY(0px)' }
+  ], {
+    duration: 2100,
+  });
+  document.getElementById("heading").animate([
+    // keyframes
+    { transform: 'translateY(-2px)' },
+    { transform: 'translateY(0px)' }
+  ], {
+    // timing options
+    duration: 2100,
+  });
+
+
+}
 </script>
 
 <html data-theme="retro">
@@ -106,7 +123,7 @@ http://www.branah.com/thai
 
 <!-- The Word -->
 <big><big>
-<h1>
+<h1 id="heading" class="fade-in-image">
   <big><span style="color:#43C6DB">{word.data[index].attributes.MaleorPresent}
   {#if word.data[index].attributes.FemaleorPast}
                       / {word.data[index].attributes.FemaleorPast}
@@ -132,7 +149,8 @@ http://www.branah.com/thai
  <div class="panel panel-default">
   <div class="twordspt panel-body">
 
-<p style="color:red">
+
+<p id="desc" style="color:red" class="fade-in-image">
  {word.data[index].attributes.definition}
 
 
@@ -186,9 +204,6 @@ http://www.branah.com/thai
  <div class="keyboard" id="keyboardContainer">
  <img src="keyboard.jpg" alt="Punjabi Unicode Keys Keyboard"/>
  </div>
-
-
-
 <br><br><br>
  </div>
 
@@ -201,31 +216,73 @@ body {
   padding: 30px;
   padding-left: 200px;
 }
+
 .twordspt{
-font-size:1.5em;
+  font-size:1.5em;
 }
+
 .next_btns {
   max-width:75px;
   text-align: center;
   cursor: pointer;
 }
+
 #keyboardContainer{
-padding:5px;
-padding-right:1px;
-background-color:red;
-visibility:hidden;
+  padding:5px;
+  padding-right:1px;
+  background-color:red;
+  visibility:hidden;
 }
+
 .keyboard{
-position:fixed;
-bottom:0px;
-right:10px;
-opacity:0.9;
+  position:fixed;
+  bottom:0px;
+  right:10px;
+  opacity:0.9;
 }
+
 .keyboard img{
-width:99%;
-max-width:800px;
+  width:99%;
+  max-width:800px;
 }
+
 a {
   cursor:hand;
 }
-  </style>
+
+/* Fade in */
+.fade-in-image {
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+/* fade in */
+
+</style>
