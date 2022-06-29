@@ -84,7 +84,7 @@ function indexIs(i){
 
 <big>
 <big>
-<h1 style="font-size:2em;">
+<h1 style="font-size:2em;font-family: auto;">
 	Arabic Gurmukhi Dictionary
 </h1>
 </big>
@@ -159,8 +159,7 @@ http://www.branah.com/thai
 							   </div>
 							</div>
 							 <br /><br />
-                <br /><br />
-                 <br /><br />
+                <br />
 
   <p>
 
@@ -215,6 +214,11 @@ http://www.branah.com/thai
 body {
   padding: 30px;
   padding-left: 200px;
+
+  background-image: url(https://live.staticflickr.com/2388/2386572246_cc73606d2e.jpg);
+    background-size: cover;
+    backdrop-filter: blur(3px);
+    font-size: 2em;
 }
 
 .twordspt{
@@ -222,7 +226,7 @@ body {
 }
 
 .next_btns {
-  max-width:75px;
+  max-width:175px;
   text-align: center;
   cursor: pointer;
 }
