@@ -203,7 +203,7 @@ http://www.branah.com/thai
  <div class="keyboard" id="keyboardContainer">
  <img src="keyboard.jpg" alt="Punjabi Unicode Keys Keyboard"/>
  </div>
-<br><br><br>
+<br>
  </div>
 
 </body>
