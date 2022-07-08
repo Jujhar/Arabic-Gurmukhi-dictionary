@@ -42,6 +42,12 @@
         "Persian"
       ],
       "default": "Arabic"
+    },
+    "source": {
+      "type": "string"
+    },
+    "pronunciation": {
+      "type": "string"
     }
   }
 }
